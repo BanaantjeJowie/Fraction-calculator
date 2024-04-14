@@ -5,8 +5,296 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFFractionCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="auto" Width="auto"
+        Background="#FFD2FC"
+        
+        >
     <Grid>
+
+        <Grid
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" Width="800" Height="434"
+               >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" 
+                   Grid.Row="0" 
+                   Content="Fraction Calculator" 
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   FontSize="30"
+                   Grid.ColumnSpan="8"
+                   Background="#231B1B"
+                   Foreground="#DDFFF7"
+
+            >
+                
+            </Label>
+                       
+
+            <Button
+                x:Name="AddOperator"
+                Grid.Column="0"
+                Grid.Row="1"
+                Content="+" 
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="AddOperator_Click"
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+            <Button
+                x:Name="SubstractOperator"
+                Grid.Column="0"
+                Grid.Row="2"
+                Content="-" 
+                FontSize="20"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="SubstractOperator_Click" 
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+            <Button
+                x:Name="DivideOperator"
+                Grid.Column="0"
+                Grid.Row="2"
+                Content="/" 
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="DivideOperator_Click"
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+            <Button
+                x:Name="MultiplyOperator"
+                Grid.Column="0"
+                Grid.Row="3"
+                Content="X" 
+                FontSize="20"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="MultiplyOperator_Click" 
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+            <Button
+                x:Name="ReciprocalOperator"
+                Grid.Column="0"
+                Grid.Row="3"
+                Content="-f" 
+                FontSize="20"
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="ReciprocalOperator_Click" 
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+            <Button
+                x:Name="InvertOperator"
+                Grid.Column="0"
+                Grid.Row="4"
+                Content="1/f" 
+                FontSize="20"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center" 
+                Click="InvertOperator_Click"
+                Height="30" Width="30"
+                Background="#ffff"
+                BorderThickness="2"
+                />
+
+            <TextBox
+                x:Name ="txtNumeratorone"
+                Grid.Column="2"
+                Grid.Row="2"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <Rectangle
+                Grid.Column="2"
+                Grid.Row="3"
+                Fill="#231b1b"
+                Height="5"
+                VerticalAlignment="Center"
+                
+                />
+            <TextBox 
+                x:Name="txtDenominatorone"
+                Grid.Column="2"
+                Grid.Row="4"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <TextBox
+                x:Name ="txtNumeratortwo"
+                Grid.Column="4"
+                Grid.Row="2"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <Rectangle
+                x:Name="streeptwee"
+                Grid.Column="4"
+                Grid.Row="3"
+                Fill="#231b1b"
+                Height="5"
+                VerticalAlignment="Center"
+                
+                />
+            <TextBox
+                x:Name="txtDenominatortwo"
+                Grid.Column="4"
+                Grid.Row="4"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <Label
+                Grid.Column="5"
+                Grid.Row="3"
+                Content="="
+                FontSize="40"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                />
+            <TextBox
+                x:Name="txtNumeratorResult"
+                Grid.Column="6"
+                Grid.Row="2"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <Rectangle
+                Grid.Column="6"
+                Grid.Row="3"
+                Fill="#231b1b"
+                Height="5"
+                VerticalAlignment="Center"
+                
+                />
+            <TextBox
+                x:Name ="txtDenominatorResult"
+                Grid.Column="6"
+                Grid.Row="4"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="#ffff"
+                BorderThickness="2" FontFamily="Arial Black"
+                />
+            <Button
+                Grid.Column="3"
+                Grid.Row="5"
+                Content="Calculate"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Click="Button_Result"
+                Background="#ffff"
+                BorderThickness="2"
+                Grid.ColumnSpan="2"
+                Height="40"
+                />
+            <TextBlock
+                Grid.Column="3"
+                x:Name="Operator"
+                Grid.Row="3"
+                FontSize="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                />
+            <TextBlock
+                Grid.Column="2"
+                x:Name="txtMessageotd"
+                Grid.Row="1"
+                Text=""
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.ColumnSpan="4"
+                />
+            <Button
+                Grid.Column="6"
+                Grid.Row="5"
+                Content="Clear"
+                FontSize="20"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Click="Button_Clear"
+                Background="#ffff"
+                BorderThickness="2"
+                Height="40"
+                />
+            <!--this is a label that will display who developed this app en a github link-->
+            <Label
+                Grid.Column="0"
+                Grid.Row="6"
+                Content="Developed by: Joe Boone - Student at VIVES University Bruges"
+                FontSize="15"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Grid.ColumnSpan="8"
+                />
+            <TextBlock
+                Grid.Column="6"
+                Grid.Row="7"
+                x:Name="Hyperlink"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="Blue"
+                Text="Github"
+                Grid.ColumnSpan="2"
+                />
+            
+
+        </Grid>
 
     </Grid>
 </Window>
