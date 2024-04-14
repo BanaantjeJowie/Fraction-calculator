@@ -1,20 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Diagnostics;
 using FractionLibrary;
 using System.Windows.Navigation;
-
 namespace WPFFractionCalculator
 {
     /// <summary>
@@ -33,27 +21,24 @@ namespace WPFFractionCalculator
             this.Close();
         }
 
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        static void OpenLink(string url)
         {
-            static void OpenLink(string url)
+            ProcessStartInfo psi = new ProcessStartInfo
             {
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true
-                };
+                FileName = url,
+                UseShellExecute = true
+            };
 
-                Process.Start(psi);
-            }
-            OpenLink(e.Uri.AbsoluteUri);
+            Process.Start(psi);
         }
 
 
         private void GitHubButton_Click(object sender, RoutedEventArgs e)
         {
             // Open the GitHub page for the project
-            string githubUrl = "https://github.com/BanaantjeJowie/Fraction-calculator";
-            Process.Start(githubUrl);
+            
+            OpenLink("https://github.com/BanaantjeJowie/Fraction-calculator");
+
         }
 
 
@@ -61,19 +46,19 @@ namespace WPFFractionCalculator
         {
 
             // Open the LinkedIn page for the project
-            Process.Start("");
+            OpenLink("https://www.linkedin.com/in/jowie-van-put-7b1b3b1b4/");
         }
 
         private void VIVESButton_Click(object sender, RoutedEventArgs e)
         {
             // Open the VIVES page for the project
-            Process.Start("");
+            OpenLink("https://www.vives.be/");
         }
 
         private void READMEButton_Click(object sender, RoutedEventArgs e)
         {
             // Open the README page for the project
-            Process.Start("");
+            Process.St");
         }
 
     }
