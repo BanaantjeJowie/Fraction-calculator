@@ -13,6 +13,8 @@ using FractionLibrary;
 using System;
 
 
+
+
 namespace WPFFractionCalculator
 {
     /// <summary>
@@ -36,38 +38,82 @@ namespace WPFFractionCalculator
         {
             if (Operator.Text == "+" )
             {
-                firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
-                secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
-                resultFraction = firstFraction.Add(secondFraction).Simplify();
-                txtDenominatorResult.Text = resultFraction.Denominator.ToString();
-                txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == "" )
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+                else
+                {
+                    txtMessageotd.Text = "";
+                    firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
+                    secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
+                    resultFraction = firstFraction.Add(secondFraction).Simplify();
+                    txtDenominatorResult.Text = resultFraction.Denominator.ToString();
+                    txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                }
+                
+                
+                
             }
             else if(Operator.Text == "-")
             {
-                firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
-                secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
-                resultFraction = firstFraction.Substract(secondFraction).Simplify();
-                txtDenominatorResult.Text = resultFraction.Denominator.ToString();
-                txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == "")
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+                else
+                { 
+                    firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
+                    secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
+                    resultFraction = firstFraction.Substract(secondFraction).Simplify();
+                    txtDenominatorResult.Text = resultFraction.Denominator.ToString();
+                    txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                }
             }
             else if(Operator.Text == "/")
             {
-                firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
-                secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
-                resultFraction = firstFraction.Divide(secondFraction).Simplify();
-                txtDenominatorResult.Text = resultFraction.Denominator.ToString();
-                txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == "")
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+
+                else
+                {
+                   firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
+                    secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
+                    resultFraction = firstFraction.Divide(secondFraction).Simplify();
+                    txtDenominatorResult.Text = resultFraction.Denominator.ToString();
+                    txtNumeratorResult.Text = resultFraction.Numerator.ToString();  
+                }
+                
+                
             }
             else if(Operator.Text == "x")
             {
-                firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
-                secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
-                resultFraction = firstFraction.Multiply(secondFraction).Simplify();
-                txtDenominatorResult.Text = resultFraction.Denominator.ToString();
-                txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == "")
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+                else
+                {
+                    firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
+                    secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
+                    resultFraction = firstFraction.Multiply(secondFraction).Simplify();
+                    txtDenominatorResult.Text = resultFraction.Denominator.ToString();
+                    txtNumeratorResult.Text = resultFraction.Numerator.ToString();
+                }
+                
+                
             }
             else if(Operator.Text == "-f")
             {
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" )
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+                else
+                { 
                 firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
                 secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
                 resultFraction = firstFraction.Reciprocal().Simplify();
@@ -77,9 +123,16 @@ namespace WPFFractionCalculator
                 txtDenominatortwo.Visibility = Visibility.Hidden;
                 streeptwee.Visibility = Visibility.Hidden;
                 txtMessageotd.Text = "The second fraction is not used in this operation.";
+                }
             }
             else if(Operator.Text == "1/f")
             {
+                if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" )
+                {
+                    txtMessageotd.Text = "Please fill in all fields.";
+                }
+                else
+                { 
                 firstFraction = new Fraction(int.Parse(txtNumeratorone.Text), int.Parse(txtDenominatorone.Text));
                 secondFraction = new Fraction(int.Parse(txtNumeratortwo.Text), int.Parse(txtDenominatortwo.Text));
                 resultFraction = firstFraction.Invert().Simplify();
@@ -89,11 +142,7 @@ namespace WPFFractionCalculator
                 txtDenominatortwo.Visibility = Visibility.Hidden;
                 streeptwee.Visibility = Visibility.Hidden;
                 txtMessageotd.Text = "The second fraction is not used in this operation.";
-                
-            }
-            else if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == ""  )
-            {
-                txtMessageotd.Text = "Please fill in all fields.";
+                }
             }
         }
         
@@ -136,8 +185,16 @@ namespace WPFFractionCalculator
             txtNumeratorResult.Text = "";
             txtDenominatorResult.Text = "";
             txtMessageotd.Text = "";
+            Operator.Text = "";
+        }
+        private void BtnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AboutWindow aboutWindow = new();
+            aboutWindow.ShowDialog();
+            this.Show();
         }
 
-       
+
     }
 }

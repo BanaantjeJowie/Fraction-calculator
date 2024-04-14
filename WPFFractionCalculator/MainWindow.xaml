@@ -13,7 +13,7 @@
 
         <Grid
                HorizontalAlignment="Center"
-               VerticalAlignment="Center" Width="800" Height="434"
+               VerticalAlignment="Center" Width="800" Height="440"
                >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
@@ -271,8 +271,7 @@
                 BorderThickness="2"
                 Height="40"
                 />
-            <!--this is a label that will display who developed this app en a github link-->
-            <Label
+             <Label
                 Grid.Column="0"
                 Grid.Row="6"
                 Content="Developed by: Joe Boone - Student at VIVES University Bruges"
@@ -281,16 +280,19 @@
                 VerticalContentAlignment="Center"
                 Grid.ColumnSpan="8"
                 />
-            <TextBlock
+            <Button 
+                x:Name="btnAbout"
+                Grid.Row="6"
                 Grid.Column="6"
-                Grid.Row="7"
-                x:Name="Hyperlink"
-                FontSize="15"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Foreground="Blue"
-                Text="Github"
                 Grid.ColumnSpan="2"
+                Content="About"  
+                HorizontalAlignment="center" 
+                Foreground="#FF0066CC" 
+                VerticalAlignment="Center" 
+                Background="Transparent" 
+                BorderBrush="{x:Null}" 
+                Click="BtnAbout_Click"
+                
                 />
             
 
