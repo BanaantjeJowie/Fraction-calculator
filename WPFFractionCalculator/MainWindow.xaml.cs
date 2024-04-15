@@ -144,6 +144,24 @@ namespace WPFFractionCalculator
                 txtMessageotd.Text = "The second fraction is not used in this operation.";
                 }
             }
+
+            if (txtDenominatorone.Text == "" || txtNumeratorone.Text == "" || txtDenominatortwo.Text == "" || txtNumeratortwo.Text == "")
+            {
+                txtMessageotd.Text = "Please fill in all fields.";
+            }
+            if (txtDenominatorone.Text == "0" || txtDenominatortwo.Text == "0")
+            {
+                txtMessageotd.Text = "Denominator can't be 0.";
+                txtDenominatorResult.Text = "Error";
+                txtNumeratorResult.Text = "Error";
+            }
+
+            
+            
+            if (Operator.Text == "")
+            {
+                txtMessageotd.Text = "Please select an operator.";
+            }
         }
         
 
@@ -193,6 +211,8 @@ namespace WPFFractionCalculator
             AboutWindow aboutWindow = new();
             aboutWindow.ShowDialog();
             this.Show();
+            
+
         }
 
 

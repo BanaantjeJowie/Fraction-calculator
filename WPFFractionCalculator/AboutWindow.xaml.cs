@@ -3,13 +3,31 @@ using System.Windows;
 using System.Diagnostics;
 using FractionLibrary;
 using System.Windows.Navigation;
+using System.Windows.Controls;
+using System.Windows.Media.Animation;
+using System.Windows.Media;
+using System.Windows.Shapes;
+using System.Windows.Media.Imaging;
+using System.Windows.Input;
+using System.Windows.Documents;
+using System.Windows.Data;
+using System.Windows.Markup;
+using System.Windows.Media.Media3D;
+using System.Windows.Media.Effects;
+
+
 namespace WPFFractionCalculator
+
 {
     /// <summary>
     /// Interaction logic for AboutWindow.xaml
     /// </summary>
     public partial class AboutWindow : Window
     {
+
+        
+
+
         public AboutWindow()
         {
             InitializeComponent();
@@ -46,7 +64,7 @@ namespace WPFFractionCalculator
         {
 
             // Open the LinkedIn page for the project
-            OpenLink("https://www.linkedin.com/in/jowie-van-put-7b1b3b1b4/");
+            OpenLink("https://www.linkedin.com/in/joë-boone-1b99402a9/");
         }
 
         private void VIVESButton_Click(object sender, RoutedEventArgs e)
@@ -58,7 +76,7 @@ namespace WPFFractionCalculator
         private void READMEButton_Click(object sender, RoutedEventArgs e)
         {
             // Open the README page for the project
-            Process.St");
+            OpenLink("https://github.com/BanaantjeJowie/Fraction-calculator/blob/master/README.md");
         }
 
     }

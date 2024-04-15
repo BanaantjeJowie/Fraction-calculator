@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFFractionCalculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="auto" Width="auto"
-        Background="#FFD2FC"
+        Background="#FFD2FC" Cursor=""
         
         >
     <Grid>
@@ -204,6 +204,7 @@
                 x:Name="txtNumeratorResult"
                 Grid.Column="6"
                 Grid.Row="2"
+                IsReadOnly="True"
                 FontSize="20"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
@@ -222,6 +223,7 @@
                 x:Name ="txtDenominatorResult"
                 Grid.Column="6"
                 Grid.Row="4"
+                IsReadOnly="True"
                 FontSize="20"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"

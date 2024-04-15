@@ -153,6 +153,7 @@
                 Background="#231B1B"
                 Foreground="#DDFFF7"
                 />
+            
         </Grid>
     </Grid>
 </Window>
