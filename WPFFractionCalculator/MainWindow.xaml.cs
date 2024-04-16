@@ -149,6 +149,7 @@ namespace WPFFractionCalculator
             {
                 txtMessageotd.Text = "Please fill in all fields.";
             }
+
             if (txtDenominatorone.Text == "0" || txtDenominatortwo.Text == "0")
             {
                 txtMessageotd.Text = "Denominator can't be 0.";
@@ -157,14 +158,12 @@ namespace WPFFractionCalculator
             }
 
             
-            
             if (Operator.Text == "")
             {
                 txtMessageotd.Text = "Please select an operator.";
             }
         }
-        
-
+       
         private void AddOperator_Click(object sender, RoutedEventArgs e)
         {
             Operator.Text = "+";

@@ -3,13 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console app fractions", "Console app fractions\Console app fractions.csproj", "{4CAA6253-B491-42F0-BF38-F12BADCB8393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console app fractions", "Console app fractions\Console app fractions.csproj", "{4CAA6253-B491-42F0-BF38-F12BADCB8393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFFractionCalculator", "WPFFractionCalculator\WPFFractionCalculator.csproj", "{9EFF06CA-F5C4-4539-99D9-AD55603DD81F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFFractionCalculator", "WPFFractionCalculator\WPFFractionCalculator.csproj", "{9EFF06CA-F5C4-4539-99D9-AD55603DD81F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionLibrary", "FractionLibrary\FractionLibrary.csproj", "{DFD3A000-C076-4625-B24E-D60C5BE8BDD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractionLibrary", "FractionLibrary\FractionLibrary.csproj", "{DFD3A000-C076-4625-B24E-D60C5BE8BDD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFractionLibrary", "TestFractionLibrary\TestFractionLibrary.csproj", "{84CC693A-4CBD-4436-B9D2-E2B6FEC40E4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFractionLibrary", "TestFractionLibrary\TestFractionLibrary.csproj", "{84CC693A-4CBD-4436-B9D2-E2B6FEC40E4E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFD3A000-C076-4625-B24E-D60C5BE8BDD2} = {DFD3A000-C076-4625-B24E-D60C5BE8BDD2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

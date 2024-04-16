@@ -46,9 +46,10 @@
                    Foreground="#DDFFF7"
 
             >
-                
+
             </Label>
-                       
+            
+
 
             <Button
                 x:Name="AddOperator"
@@ -273,7 +274,7 @@
                 BorderThickness="2"
                 Height="40"
                 />
-             <Label
+            <Label
                 Grid.Column="0"
                 Grid.Row="6"
                 Content="Developed by: Joe Boone - Student at VIVES University Bruges"
@@ -296,7 +297,7 @@
                 Click="BtnAbout_Click"
                 
                 />
-            
+
 
         </Grid>
 

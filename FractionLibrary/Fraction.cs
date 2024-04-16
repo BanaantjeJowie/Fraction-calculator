@@ -111,7 +111,7 @@ namespace FractionLibrary
             int gcd = GCD(Numerator, Denominator);
             return new Fraction(Numerator / gcd, Denominator / gcd);
         }
-        private int GCD(int numerator, int denominator)
+        public int GCD(int numerator, int denominator)
         {
            
 

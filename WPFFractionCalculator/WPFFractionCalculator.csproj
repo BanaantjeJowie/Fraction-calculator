@@ -12,4 +12,8 @@
     <ProjectReference Include="..\FractionLibrary\FractionLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+
 </Project>
