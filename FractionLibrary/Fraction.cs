@@ -25,7 +25,7 @@ namespace FractionLibrary
 
         //The general idea behind the mathematical methods is that the result of the calculation is always returned as a new object of type Fraction.Neither the called upon object or the right operand is ever modified.
 
-
+        //jejeje
 
         //welcome the user to the fraction calculator
         public static void Welcome()
